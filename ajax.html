@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#button").click(function(){
+				var sendu = $("#username").val();
+				var sendp = $("#password").val();
+				$.ajax({
+					type:"POST",
+					url:"ajax.php",
+					data:"username="+sendu+"&password="+sendp,
+					dataType:"json",
+					success:function(msg,string,jqXHR){
+						$("#result").html(msg.name+"<br>"+msg.password);
+					}
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	Name:<input type="text" id="username" name="username"><br><br>
+	Password:<input type="password" id="password"name="password"><br><br>
+	<input type="button" id="button" value="submit">
+	<p><div id="result"></div></p>
+</body>
+</html>

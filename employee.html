@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<title>Employee's Data</title>
+	<style>
+		table{
+			border-collapse: collapse;
+		}
+		table, th, td{
+			border: 1px solid black;
+		}
+
+	</style>
+</head>
+<body>
+	<table id="employee_table">
+		<tr>
+			<th>Name</th>
+			<th>Gender</th>
+		</tr>
+	</table>
+</body>
+</html>
+<script>
+	$(document).ready(function(){
+		$.getJSON("employee.json",function(data){
+			var employee_data='';
+			$.each(data, function(key, value){
+				employee_data+='<tr>';
+				employee_data+='<td>'+value.Name+'</td>';
+				employee_data+='<td>'+value.Gender+'</td>';
+			});
+			$('#employee_table').append(employee_data);
+		});
+	});
+</script>

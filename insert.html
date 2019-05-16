@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		table{
+        border-collapse: collapse;
+		}
+		table, th, td{
+			border: 1px solid black;
+		}
+		th,td{
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>	
+	First Name:<input type="text" name="fname" id="fname"><br><br>
+	Last Name:<input type="text" name="lname" id="lname"><br><br>
+	<button onclick="addHtmlTableRow()">Submit</button>
+	<br><br>
+	<table id="table">
+	<tr>
+		<th>First Name</th>
+		<th>Last Name</th>
+	</tr>
+    </table>
+<script >
+	function addHtmlTableRow()
+	{
+		var table = document.getElementById("table"),
+		newRow=table.insertRow(table.length),
+		cell1=newRow.insertCell(0),
+		cell2=newRow.insertCell(1),
+		fname=document.getElementById("fname").value;
+		lname=document.getElementById("lname").value;
+		cell1.innerHTML=fname;
+		cell2.innerHTML=lname;
+	}
+</script>
+</body>
+</html>
