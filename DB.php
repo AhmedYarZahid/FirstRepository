@@ -1,7 +1,7 @@
 <?php
 $name=$_POST['name'];
 $phone_no=$_POST['phone_no'];
-$con=mysqli_connect('localhost','root','','tutor');
+$con=mysqli_connect('localhost','root','oneclout','tutor');
 
 $query="INSERT INTO admission(name, phone_no) VALUES ('$name','$phone_no')";
 

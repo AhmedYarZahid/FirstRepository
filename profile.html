@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="profile.css">
+    <script type="text/javascript" src="untitled.js"></script>
+	<title>Git Hub Profile Data</title>
+</head>
+<body>
+<div class="container " id = "profile" style="display: none;text-align: center;background-color: white; width: 500px; margin-top: 70px; border-radius: 30px;">
+	<div class="row">
+	  	 <div class="col-lg-12" style="background-color: white; margin-top: 40px; border-radius: 30px; font-family: verdena; margin-bottom: 20px;" >
+	  	 <p id="pic" class='image' ></p>
+	  	 <hr>
+	  	 <p><strong>Skills:</strong></strong><span class="tags1">html5</span> <span class="tags1">css3</span> <span class="tags1">jquery</span> <span class="tags1">bootsrap3</span></p>
+	  	 <hr>
+	     <p class="s"><strong>Name: </strong><br><span id="name"></span></p>
+ 	     <p class="s"><strong>About Me: </strong><br><span id="about"></span></p>
+ 	     <p class="s"><strong>Address: </strong><br><span id="location"></span></p>
+ 	     <p class="s"><strong>Company: </strong><br><span id="company"></span></p>
+ 	     <p class="s"><strong>URL: </strong><br><span id="blog"></span></p>
+ 	     </div>
+    </div>
+ </div>
+<div class="container " style="text-align: center;background-color: lightgrey; width: 500px; margin-top: 70px; border-radius: 30px; height: 400px;">
+	<div class="row">
+		<div class="col-lg-12 padding">
+			<h1>Ahmed Yar Zahid</h1>
+			<p><strong>About:</strong>Web Designer/ UI</p>
+			<p><strong>Hobbies:</strong>Read, out with friends, listen to music, draw and learn new things.</p>
+			<p ><strong>Skills:</strong><span class="tags">html5</span> <span class="tags">css3</span> <span class="tags">jquery</span> <span class="tags">bootsrap3</span></p>
+			<hr>
+			<button onclick="openProfile()">View Profile</button>
+		</div>
+		
+	</div>
+</div>
+</body>
+ 		<script >
+ 		function openProfile(){
+ 				document.getElementById("profile").style.display="block";
+ 			}
+ 		</script>
+</html>

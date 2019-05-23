@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery6</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#p1').hover(function(){
+					alert('You entered!');
+				},
+				function(){
+					alert('You left!');
+				});
+			});
+		</script>
+</head>
+<body>
+<p id="p1">This is a paragraph.</p>
+</body>
+</html>

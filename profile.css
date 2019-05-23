@@ -1,0 +1,54 @@
+	    body{
+	    	background-color: grey;
+	    }
+	    .bc{
+	    	background-color: grey;
+	    	color: white;
+	    	line-height: 2.5;
+	    	padding: 30px;
+	    	margin-top: 50px;
+
+	    }
+	    p{
+	    	color: black;
+	    	font-size: 15px;
+	    }
+	    .
+		table{
+			border-collapse: collapse;
+		}
+		table, th, td{
+			border: 1px solid black;
+		}
+		.image img{
+			width:140px;
+			height: 140px;
+			border-radius: 50%;
+			margin-top: 20px;
+		}
+		.padding{
+			padding: 50px;
+		}
+		.tags{
+			background-color: grey;
+			color: black;
+			width: 10px;
+			margin; 5px;
+			border-radius: 5px;
+			padding: 5px;
+		}
+		.size{
+			font-size: 20px;
+		}
+		img{
+			width: 160;
+		}
+		.tags1{
+			background-color: grey;
+			color: lightblue;
+			width: 10px;
+			margin: 1px;
+			border-radius: 5px;
+			padding: 5px;
+
+		}

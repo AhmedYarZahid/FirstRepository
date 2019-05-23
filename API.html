@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<title>Git Hub Profile Data</title>
+	<style>
+	    body{
+	    	background-color: lightgrey;
+	    }
+	    .bc{
+	    	background-color: grey;
+	    	color: white;
+	    	line-height: 2.5;
+	    	padding: 30px;
+	    	margin-top: 50px;
+
+	    }
+	    p{
+	    	color: black;
+	    	font-size: 15px;
+	    }
+	    .
+		table{
+			border-collapse: collapse;
+		}
+		table, th, td{
+			border: 1px solid black;
+		}
+		.image{
+			height: auto;
+			max-width:100%;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+ <div class = " row bc">
+ 	<p id="pic" class=' col-sm-6 image'></p>
+ 	<div  class = 'col-sm-6'style="float: right;">
+ 	 <p>Name: <br><span id="name" style="color: lightblue"></span></p>
+ 	 <p>About Me: <br><span id="about" style="color: lightblue"></span></p>
+ 	 <p>Address: <br><span id="location" style="color: lightblue"></span></p>
+ 	 <p>Company: <br><span id="company" style="color: lightblue"></span></p>
+ 	 <p>URL: <br><span id="blog" style="color: lightblue"></span></p>
+ 	</div>
+ </div>
+</div>
+</body>
+</html>
+<script>
+	$(document).ready(function(){
+		$.ajax({
+				    type:"get",
+					url:"https://api.github.com/users/AhmedYarZahid",
+					dataType:"json",
+					success:function(response){
+						console.log(response);
+						$('#name').text(response.login);
+						$('#about').text(response.bio);
+						$('#location').text(response.location);
+						$('#company').text(response.company);
+						$('#blog').text(response.blog);
+						$("#pic").html('<img src=' + response.avatar_url + '>');
+					}
+				});
+	});
+</script>

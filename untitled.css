@@ -1,0 +1,26 @@
+	    body{
+	    	background-color: lightgrey;
+	    }
+	    .bc{
+	    	background-color: grey;
+	    	color: white;
+	    	line-height: 2.5;
+	    	padding: 30px;
+	    	margin-top: 50px;
+
+	    }
+	    p{
+	    	color: black;
+	    	font-size: 15px;
+	    }
+	    .
+		table{
+			border-collapse: collapse;
+		}
+		table, th, td{
+			border: 1px solid black;
+		}
+		.image{
+			height: auto;
+			max-width:100%;
+		}
