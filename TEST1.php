@@ -1,17 +1,17 @@
 <?php
-$fname=$_POST['fname'];
-$lname=$_POST['lname'];
-$con=mysqli_connect('localhost','root','','will');
+$name=$_POST['name'];
+$phone_no=$_POST['phone_no'];
+$con=mysqli_connect('localhost','root','oneclout','tutor');
 
-$query="INSERT INTO name(fname, lname) VALUES ('$fname','$lname')";
+$query="INSERT INTO admission(name, phone_no) VALUES ('$name','$phone_no')";
 
-if(mysqli_connect_errno($con)){
+/*if(mysqli_connect_errno($con)){
 	echo "failed to connect";
 }
     else {echo "Data Inserted. Successfuly!<br>
-    First Name = $fname<br>
-    Last Name = $lname";
-}
-mysqli_query($con,"SELECT * FROM name");
-mysqli_query($con,"INSERT INTO name(fname, lname) VALUES('$fname','$lname')");
+    Name = $name<br>
+    Phone no = $phone_no";
+}*/
+mysqli_query($con,"SELECT * FROM admission");
+mysqli_query($con,"INSERT INTO admission(name, phone_no) VALUES('$name','$phone_no')");
 ?>
