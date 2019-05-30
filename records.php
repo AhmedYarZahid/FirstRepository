@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost","root","","tutor");
+$conn = mysqli_connect("localhost","root","oneclout","tutor");
 $sql="SELECT * FROM admission";
 $records=mysqli_query($conn, $sql);
  ?>
