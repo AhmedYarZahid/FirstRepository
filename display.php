@@ -37,7 +37,7 @@ $records=mysqli_query($conn, $sql);
  				<td><?php echo $crudtable['id']?></td>
  				<td><?php echo $crudtable['username']?></td>
  				<td><?php echo $crudtable['password']?></td>
- 				<td><a class="btn-danger btn" href="delete.php?id=<?php echo $crudtable['id']?>" class="text-white">Delete</a></td>
+ 				<td><a class="btn-danger btn" href="delete.php?id=<?php echo $crudtable['id'];?>" class="text-white">Delete</a></td>
  				<td><a class="btn-primary btn" href="update.php?id=<?php echo $crudtable['id'];?>" class="text-white">Update</a></td>
  			</tr>
  		<?php }

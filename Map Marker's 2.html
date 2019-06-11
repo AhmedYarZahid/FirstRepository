@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Map Marker's 2</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.css' rel='stylesheet' />
+<style>
+  body { margin:0; padding:0; }
+  #map_geo { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+</head>
+<body>
+<div id='map_geo' class='map'></div>
+<script>
+	L.mapbox.accessToken = 'pk.eyJ1IjoiYWhtZWR5YXJ6YWhpZCIsImEiOiJjandxMzl5MjAxcWptNDRvbGt6cDhmNzlpIn0.Ga6Yf8P1lM1w1RoLkiKrNw';
+
+	var geojson = [
+	{
+		type: 'Feature',
+		geometry: {
+			type: 'Point',
+			coordinates:[-77.031952, 38.913184]
+		},
+		properties: {
+        'marker-color': '#3bb2d0',
+        'marker-size': 'large',
+        'marker-symbol': 'rocket'
+     }
+	},
+	{
+		type: 'Feature',
+		geometry: {
+			type: 'Point',
+			coordinates: [-122.413682, 37.775408]
+		},
+		properties: {
+        'marker-color': '#3bb2d0',
+        'marker-size': 'large',
+        'marker-symbol': 'rocket'
+     }
+	}
+  ];
+  var mapGeo = L.mapbox.map('map_geo').setView([37.8, -96], 4).addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/light-v10'));
+  var myLayer = L.mapbox.featureLayer().setGeoJSON(geojson).addTo(mapGeo); 
+  mapGeo.scrollWheelZoom.disable();
+</script>
+</body>
+</html>
